@@ -1,3 +1,10 @@
+var searchTerm;
+var searchButton = $("#searchButton");
+var clearResults = $("#clearResults");
+
+var yearRange = function (start, end) { };
+
+
 // ajax call
 // API Key GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH
 
