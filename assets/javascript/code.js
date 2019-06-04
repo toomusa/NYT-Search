@@ -32,12 +32,12 @@ searchButton.on("click", function () {
   query1 = searchTerm;
 
   if (start !== "") {
-    query1.append(`&begin_date=${start}`);
+    query1 += `&begin_date=${start}0101`;
   }
   
   if (end !== "") {
-    query1.append(`&end_date=${end}`);
-  }
+    query1 += `&end_date=${end}0101`;
+}
   
   let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query1}&api-key=GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH`;
 
