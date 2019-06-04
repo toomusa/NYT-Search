@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+  <title>NYT Article Search</title>
+</head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4"><i class= "far fa-newspaper"></i>New York Times Search</h1>
-        </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-12 jumbotron jumbotron-fluid" id="heading">
+        <!-- header row -->
+                    <h1 class="display-4"><i class= "far fa-newspaper"></i>New York Times Search</h1>
+      </div>
     </div>
 
-    <div class="container"></div>
+    <div class="row">
+      <div class="col-sm-3 col-xs-1 col-md-4 spacer">
+        <!-- left-side spacer -->
+      </div>
+      <div class="col-sm-6 col-xs-10 col-md-4" id="form-area">
+        <!-- form content goes here -->
         <form>
             <div class="row col-md-12">
                 <p>Search Parameters</p>
@@ -55,11 +66,23 @@
                 <p>Top Articles</p>
             </div>
         </form>
+      </div>
+      <div class="col-sm-3 col-xs-1 col-md-4 spacer">
+        <!-- right-side spacer -->
+      </div>
     </div>
-    <div>
+
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-12" id="footing">
+        <!-- footer row -->
         <footer>Made with lots and lots of  <i class= "fas fa-heart"></i></footer>
+      </div>
     </div>
+
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script rel="javascript" src="./assets/javascript/game.js"></script>
 
 </body>
-
 </html>
