@@ -35,11 +35,11 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Search Term</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1">
+                <input type="email" class="form-control" id="search-term">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Number of Records to Retrieve</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="num-records">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -49,29 +49,29 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Start Year (Optional):</label>
-                <input type="year" class="form-control">
+                <input type="year" class="form-control" id="start-year">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">End Year (Optional):</label>
-                <input type="year" class="form-control">
+                <input type="year" class="form-control" id="end-year">
             </div>
             <button type="button" class="btn btn-primary btn-sm" id="searchButton">Search <i class= "fas fa-search"></i></button>
             <button type="button" class="btn btn-secondary btn-sm" id="clearResults">Clear Results <i class= "fas fa-trash-alt"></i></button>
         </form>
     </div>
-    <br>
-    <div class="container">
-        <form>
-            <div class="row col-md-12">
-                <p>Top Articles</p>
-            </div>
-        </form>
-      </div>
-      <div class="col-sm-3 col-xs-1 col-md-4 spacer">
+    <div class="col-sm-3 col-xs-1 col-md-4 spacer">
         <!-- right-side spacer -->
       </div>
     </div>
-
+    <br>
+    <div class="row">
+      <div class="col-sm-6 col-xs-10 col-md-4">
+          <h1>Top Articles</h1>
+          <div id="article-view">
+            <!-- search results go here -->
+          </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-12 col-xs-12 col-md-12" id="footing">
         <!-- footer row -->
@@ -79,10 +79,9 @@
       </div>
     </div>
 
-  </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script rel="javascript" src="./assets/javascript/game.js"></script>
+  <script rel="javascript" src="./assets/javascript/code.js"></script>
 
 </body>
 </html>

@@ -15,7 +15,6 @@ var clearResults = $("#clearResults");
 // numRecords variable for record limit
 //searchButton
 //searchTerm , has IDs
-query1 = search
 
 //if limit on records exists
 // if (numRecords) {
@@ -23,46 +22,51 @@ query1 = search
 //   query1.append(`&limit=${rec}`);
 // }
 
-if (start) {
-  query1.append(`&begin_date=${start}`);
-}
 
-if (end) {
-  query1.append(`&end_date=${end}`);
-}
-
-let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query1}&api-key=GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH`;
-
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response) {
-  console.log(response);
-  console.log(response.reponse.meta.hits);
-  for (let i=0; i < numRecords-1; i++) {
-    console.log(response.reponse.docs[i]);
-  }
 
 searchButton.on("click", function () {
-    search = $("#searchButton").val();
-    start = $("#start").val();
-    end = $("#end").val();
-}
+  searchTerm = $("#search-term");
+  numRecords = $("#num-records").val();
+  start = $("#start-year").val();
+  end = $("#end-year").val();
+  query1 = searchTerm;
 
-    // ajax call
-    // API Key GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH
+  if (start !== "") {
+    query1.append(`&begin_date=${start}`);
+  }
+  
+  if (end !== "") {
+    query1.append(`&end_date=${end}`);
+  }
+  
+  let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query1}&api-key=GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH`;
 
-    let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query1}&api-key=GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH`;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    // console.log(response.reponse.meta.hits);
+    for (let i=0; i < numRecords; i++) {
+      // debugger;
+      let results = response.response.docs[i].web_url;
+      $("#article-view").append(results);
+    }
+  });
 
+});
 
-
-
-
-
-
+// ajax call
+// API Key GevTC67WTlBRpmBttQ4SDfrAxT6N0VRH
 
 clearResults.on("click", function () {
-    $("#searchButton").val('');
-    $("start").val('');
-    $("end").val('');
+  $("#searchButton").val('');
+  $("start").val('');
+  $("end").val('');
 });
+
+
+
+
+
+
